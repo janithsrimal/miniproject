@@ -1,0 +1,647 @@
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Urbanist', sans-serif;
+}
+.header{
+	min-height:100vh;
+	width:  100%;
+	background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/honey.jpg);
+	background-position: center;
+	background-size:  cover;
+	position: relative;
+
+}
+.topic{
+	padding-top: 100px
+	color: #444;
+	padding:10px;
+	font-size: 40px;
+	text-align: center;
+}
+nav{
+	display:flex;
+	padding:2% 6%;
+	justify-content: space-between;
+	align-items: center;
+}
+nav img{
+	width: 180px;
+
+}
+.nav-links{
+	 
+	flex: 1;
+	text-align: right;
+}
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 6px 10px; 
+	position:relative; 
+}
+.nav-links ul li a{
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+
+}
+.nav-links ul li::after{
+	content:'';
+	width: 0%;
+	height:2px;
+	background:#35F306;
+	display:block;
+	margin:auto;
+	transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+	width: 100%;
+
+}
+.text-box{
+	width: 90%;
+	color:#fff;
+	position: absolute;
+	top:40%;
+	left:06%;
+	transform:translate(-50%-50%);
+	text-align: center;
+}
+.text-box h1{
+	font-size: 60px;
+}
+.text-box h2{
+	font-size: 45px;
+}
+.text-box p{
+	margin:10px 0 40px;
+	font-size: 18px;
+	color: #fff;
+}
+
+/*media size*/
+@media(max-width:700px){
+	.text-box h1{
+		font-size:20px;
+	}
+	.nav-links ul li{
+		display: block;
+
+	}
+	/*menu in mobile view*/
+	.nav-links{
+		position: absolute;
+		background: #f44336;
+		height: 500vh;
+		width: 200px;
+		top: 0;
+		right: 0;
+		text-align:right;
+		z-index: 2;
+	}
+	nav.fa{
+		display: block;
+		color: #fff;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+		
+	}	
+
+}	
+
+/*courses*/
+/*container adjustments*/
+.course .box-container{
+	margin-top: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center; 
+	flex-wrap: wrap;
+	 
+}
+
+.course .box-container .box{
+
+	flex-basis: 15%;
+	border-radius:10px;
+	width: 350px;
+	border:1px solid rgba(0,0,0,0.3);
+	position: relative;
+	margin: 20px;
+	
+	
+}
+.course .box-container .box:hover{
+	box-shadow: 0 0 20px 0px rgba(0,0,0,0.5);
+
+}
+
+.course .box-container .box img{
+    height:250px;
+    width: 100%;
+    object-fit: cover;
+}
+.course .box-container .box .content{
+    padding:10px;
+}
+
+.course .box-container .box .content .stars i{
+    color:#f39c12;
+    font-size: 17px;
+    padding:10px 10px;
+}
+
+.course .box-container .box .content .title{
+    color:#444;
+    font-size: 21px;
+}
+.course .box-container .box .content .title:hover{
+    text-decoration: underline;
+}
+.course .box-container .box .content p{
+    padding:10px 0;
+    color:#666;
+    font-size: 12px;
+}
+.course .box-container .box .content .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    border-top: 1px solid rgba(0,0,0,.3);
+}
+
+.course .box-container .box .content .info h3{
+    font-size: 15px;
+    padding:10px;
+    color:#666;
+}
+.course .box-container .box .content .info h3 i{
+    color:#f39c12;
+}
+.course .box-container .box .price{
+    position: absolute;
+    top:30px; left:30px;
+    text-align: center;
+    
+    color:#fff;
+    font-size: 20px;
+}
+@media(max-width: 700px){
+	.course .box-container{
+		flex-direction: column;
+	}
+}
+
+
+/*affliated uni css*/
+.campus{
+
+	width: 80%;
+	margin :auto;
+	text-align: center;
+	padding-top:50px; 
+	
+}
+.af-campus{
+	flex-basis: 15%;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	display: flex;
+	position: relative;
+	overflow: hidden;
+	justify-content: space-between;
+
+	
+}
+/*af image size*/
+.af-campus img{
+	width :300px;
+	height: 300px;
+	display: block;
+	
+	
+
+
+	
+
+}
+/*af uni effect*/
+.about{
+	background: transparent;
+	height: 300px;
+	width:300px;
+	position: absolute;
+	top: 0;
+	left:0;
+	transition: 0.5s;
+}
+/*af hover */
+.about:hover{
+	background: rgba(91, 217, 75 ,0.3);
+}
+.about h3{
+	width: 100%
+	font-weight : 500;
+	color: #fff;
+	font-size: 18px;
+	bottom: 0;
+	left:50%;
+	transform: translateX(-50%);
+	position: absolute;
+}	
+
+
+
+.desc{
+	text-align: center;
+	justify-content: center;
+	padding-top: 60px;
+	font-weight: 400;
+
+	
+
+}
+
+
+/*facilities*/
+.facility{
+	width :80%;
+	margin:auto;
+	text-align: center;
+	padding-top: 100px;
+}
+.fac{
+	flex-basis: 31%;
+	border-radius:10px;
+	margin-bottom: 5%;
+	text-align:left;
+
+}
+.fac img{
+	width:90%;
+	border-radius: 10px; 
+	position:relative; 
+}
+.fac p{
+	padding: 0;
+
+}
+.facility p{
+	padding:0;
+	padding-bottom: 25px;
+}
+.fac h3{
+	margin-top: 16px;
+	margin-bottom: 15px;
+	text-align: left;
+
+}
+.fac h3:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*action css*/
+.ca{
+	margin: 100px auto;
+
+	font-size: 20px;
+	width: 80%;
+	background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/hp.jpg);
+	background-position:center;
+	background-size: cover;
+	border-radius: 10px;
+	text-align: center;
+	padding:100px 0; 
+
+}
+.ca h1{
+	color: #fff;
+	margin-bottom: 40px;
+	padding: 0;
+
+
+}
+.button{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border:1px solid #fff;
+	padding:12px 32px ;
+	font-size: 13px;
+	background: transparent;
+	position: relative;
+	cursor: pointer;
+
+}
+.button:hover{
+	border:1px solid #1AAA08 ;
+	background: #1AAA08 ;
+	transition: 2s;
+
+}
+
+@media(max-width: 700px){
+	.ca h1{
+		font-size: 24px;
+	}
+}
+
+/*footer css*/
+.footer{
+	width: 100%;
+	text-align: center;
+	padding: 30px 0;
+
+}
+.footer h4{
+	margin-bottom: 25px;
+	margin-top: 20px;
+	font-weight: 600;
+}
+.icons .fab{
+	color: #1AAA08 ;
+	margin: 0 13px;
+	cursor: pointer;
+	padding: 13px 0;
+	size: 50px;
+
+}
+.fa-laptop-code{
+	color:#1AAA08 ;
+}
+
+
+/*about us sub page*/
+.sub-header{
+	height: 50vh;
+	width: 100%;
+	background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/about.jpg);
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+
+
+}
+.about-us{
+	height: 60vh;
+	width: 100%;
+	background-image:linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/honey.jpg);
+	background-position: center;
+	background-size: cover;
+	color: #fff;
+	font-size: 24px;
+	margin: auto;
+	padding-top: 80px;
+	padding-bottom: 50px;
+	text-align: center;
+	padding-left: 465px;
+	
+
+
+}
+.abt h1{
+
+	font-size: 28px;
+		
+}
+.abt p{
+	padding-top: 20px;
+	font-size: 18px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+	
+	
+}
+.abt{
+	flex-basis: 48%;
+	padding: 30px 2px;
+
+
+}
+.course-sub{
+	text-align: center;
+	padding-top: 30px; 
+}
+.course-sub-col{
+	padding-top: 40px;
+	text-align: left;
+	margin-left: 160px;
+	font-weight: 500;
+}
+
+/*contact*/
+.contact{
+   	min-height:50vh;
+	width:  100%;
+	background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/contactcv.jpg);
+	background-position: center;
+	background-size:  cover;
+	position: relative;
+}
+
+.heading{
+    color:#fff;
+}
+
+.row{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+ .row form{
+    flex:1 1 50px;
+    background:#222;
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    align-items: flex-start;
+    padding-left: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right:40px;
+   	background: transparent;
+   
+    
+
+}
+
+.boxo{
+    height:40px;
+    width:49%;
+    border:1px solid #eee;
+    padding:0 10px;
+    margin:10px 0;
+    font-size: 15px;
+    color:#fff;
+    background:none;
+    text-transform: none;
+    border-radius: 20px;
+
+
+}
+
+
+.boxo:focus{
+    border-color: #f39c12;
+}
+
+.boxo::placeholder{
+    text-transform: capitalize;
+}
+boxo adress
+#box1{
+	height:80px;
+    width:49%;
+    border:1px solid #eee;
+    padding:0 10px;
+    margin:10px 0;
+    font-size: 15px;
+    color:#fff;
+    background:none;
+    text-transform: none;
+    border-radius: 20px;
+
+}
+#box1:focus{
+    border-color: #f39c12;
+}
+
+#box1::placeholder{
+    text-transform: capitalize;
+}
+
+
+
+.address{
+   	height: 80%
+    padding:10px;
+    resize: none;
+    
+}
+
+.btn:hover{
+    background:#fff;
+    color:#333;
+}
+
+.image img{
+    height: 80vh;
+    margin-top: 20px;
+}
+
+
+/*contact button*/
+
+.button1{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border:1px solid #fff;
+	padding:12px 32px ;
+	font-size: 13px;
+	background: transparent;
+	position: absolute;
+	cursor: pointer;
+	margin-top: 370px;
+	border-radius: 20px;
+}
+.button1:hover{
+	border:1px solid #1AAA08 ;
+	background: #1AAA08 ;
+	transition: 2s;
+
+}
+
+/*login page*/
+
+.login{
+   	min-height:70vh;
+	width:  100%;
+	background-image: linear-gradient(rgba(4,9,30,0.5),rgba(4,9,30,0.5)),url(images/login.jpg);
+	background-position: center;
+	background-size:  cover;
+	position: relative;
+}
+.button4{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border:1px solid #fff;
+	padding:12px 32px ;
+	font-size: 13px;
+	background: transparent;
+	position: absolute;
+	cursor: pointer;
+	margin-top: 160px;
+	border-radius: 20px;
+	
+}
+.button4:hover{
+	border:1px solid #1AAA08 ;
+	background: #1AAA08 ;
+	transition: 2s;
+
+}
+.button2{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border:1px solid #fff;
+	padding:12px 32px ;
+	font-size: 13px;
+	background: transparent;
+	position: absolute;
+	cursor: pointer;
+	margin-top: 160px;
+	border-radius: 20px;
+	margin-left: 700px;
+}
+.button2:hover{
+	border:1px solid #1AAA08 ;
+	background: #1AAA08 ;
+	transition: 2s;
+
+}
+
+
+
+/*register button login page*/
+.register{
+   	min-height:70vh;
+	width:  100%;
+	background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/contactcv.jpg);
+	background-position: center;
+	background-size:  cover;
+	position: relative;
+}
+.button3{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border:1px solid #fff;
+	padding:12px 32px ;
+	font-size: 13px;
+	background: transparent;
+	position: absolute;
+	cursor: pointer;
+	margin-top: 460px;
+	border-radius: 20px;
+	
+}
+.button3:hover{
+	border:1px solid #1AAA08 ;
+	background: #1AAA08 ;
+	transition: 2s;
+
+}
+
